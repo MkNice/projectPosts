@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ArticleComponent } from './components/newsModule/article/article.component';
-import { NewsComponent } from './components/newsModule/news/news.component';
+import { ArticleComponent } from './dashboard/newsModule/article/article.component';
+import { NewsComponent } from './dashboard/newsModule/news/news.component';
 
 const routes: Routes = [
   { path: 'home', component: NewsComponent },

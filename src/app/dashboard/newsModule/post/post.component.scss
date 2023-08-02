@@ -1,0 +1,36 @@
+.post {
+  display: flex;
+  flex-direction: column;
+
+  width: 400px;
+  height: 530px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+
+  color: #363636;
+  font-style: normal;
+  font-weight: 400;
+
+  &-img {
+    width: 400px;
+    height: 217px;
+  }
+  &-container {
+    padding: 25px;
+    &-icon {
+      margin-right: 8px;
+    }
+    &-title {
+      font-size: 24px;
+    }
+    &-description {
+      font-size: 16px;
+      line-height: 150%;
+    }
+    &-link {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 150%;
+    }
+  }
+}

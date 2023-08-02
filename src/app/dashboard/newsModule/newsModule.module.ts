@@ -7,6 +7,8 @@ import { FilterComponent } from './filter/filter.component';
 import { NewsComponent } from './news/news.component';
 import { PostComponent } from './post/post.component';
 import { PostsComponent } from './posts/posts.component';
+import { FormsModule } from '@angular/forms';
+import { DateFormatPipe } from 'src/app/shared/pipes/dateFormat.pipe';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { PostsComponent } from './posts/posts.component';
     PostsComponent,
     PostComponent,
     ArticleComponent,
-    NewsComponent
+    NewsComponent,
+    DateFormatPipe
   ],
   imports: [
     CommonModule,
     HttpClientModule,
+    FormsModule,
   ]
 })
 export class NewsModuleModule { }

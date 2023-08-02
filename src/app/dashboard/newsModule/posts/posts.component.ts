@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input,OnInit } from '@angular/core';
+import { IArticle } from 'src/app/shared/interfaces/article.interface';
 
 @Component({
   selector: 'app-posts',
@@ -7,5 +8,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostsComponent {
-
+  @Input() public articles: IArticle[] = [];
 }

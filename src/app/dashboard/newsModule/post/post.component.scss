@@ -11,6 +11,7 @@
   font-style: normal;
   font-weight: 400;
 
+  margin-bottom: 45px;
   &-img {
     width: 400px;
     height: 217px;
@@ -26,6 +27,13 @@
     &-description {
       font-size: 16px;
       line-height: 150%;
+      width: 350px;
+      word-wrap: break-word;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
     }
     &-link {
       font-size: 16px;

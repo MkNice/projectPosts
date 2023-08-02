@@ -21,12 +21,8 @@
     &-icon {
       margin-right: 8px;
     }
-    &-title {
-      font-size: 24px;
-    }
+    &-title,
     &-description {
-      font-size: 16px;
-      line-height: 150%;
       width: 350px;
       word-wrap: break-word;
       overflow: hidden;
@@ -34,6 +30,15 @@
       display: -webkit-box;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
+    }
+    &-title {
+      font-size: 24px;
+      -webkit-line-clamp: 2;
+    }
+    &-description {
+      font-size: 16px;
+      line-height: 150%;
+      width: 350px;
     }
     &-link {
       font-size: 16px;

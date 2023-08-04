@@ -6,7 +6,7 @@ import { NgxsModule } from '@ngxs/store';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NewsModuleModule } from './dashboard/newsModule/newsModule.module';
+import { NewsModule } from './dashboard/newsModule/news.module';
 import { ApiInterceptor } from './shared/interceptors/api.interceptor';
 import { environment } from 'src/environments/environment.prod';
 import { ArticleState } from './shared/store/news.state';
@@ -18,9 +18,9 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
     AppComponent,
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
-    NewsModuleModule,
+    AppRoutingModule,
+    NewsModule,
     NgxsModule.forRoot([ArticleState], {
       developmentMode: !environment.production
     }),

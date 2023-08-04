@@ -1,14 +1,15 @@
 import { Selector } from '@ngxs/store';
 import { ArticleState } from './news.state';
+import { IArticleState } from '../interfaces/articleState.interface';
 
 export class ArticleSelectors {
   @Selector([ArticleState])
-  static article(state: any) {
+  static article(state: IArticleState) {
     return state.article;
   }
 
   @Selector([ArticleState])
-  static error(state: any) {
+  static error(state: IArticleState) {
     return state.error;
   }
 }

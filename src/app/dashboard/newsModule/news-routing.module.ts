@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NewsComponent } from './dashboard/newsModule/news/news.component';
+import { ArticleComponent } from './article/article.component';
 
 const routes: Routes = [
-  { path: 'home', component: NewsComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'article', component: ArticleComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class NewsRoutingModule { }

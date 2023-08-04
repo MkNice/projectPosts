@@ -9,6 +9,8 @@ import { PostComponent } from './post/post.component';
 import { PostsComponent } from './posts/posts.component';
 import { FormsModule } from '@angular/forms';
 import { DateFormatPipe } from 'src/app/shared/pipes/dateFormat.pipe';
+import { NewsRoutingModule } from './news-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { DateFormatPipe } from 'src/app/shared/pipes/dateFormat.pipe';
     CommonModule,
     HttpClientModule,
     FormsModule,
+    NewsRoutingModule
   ]
 })
-export class NewsModuleModule { }
+export class NewsModule { }

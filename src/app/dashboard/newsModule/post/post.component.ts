@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { IArticle } from 'src/app/shared/interfaces/article.interface';
 
 @Component({
@@ -8,17 +9,11 @@ import { IArticle } from 'src/app/shared/interfaces/article.interface';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostComponent {
-  @Input() public article: IArticle = {
-    id: 0,
-    title: '',
-    url: '',
-    image_url: '',
-    news_site: '',
-    summary: '',
-    published_at: '',
-    updated_at: '',
-    feature: false,
-    launches: [],
-    events: [],
-  };
+  @Input() public article!: IArticle;
+
+  constructor(private router: Router) {}
+
+  public onReadMore() {
+    this.router.navigate(['/article'], { state: { data: this.article } });
+  }
 }

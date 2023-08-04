@@ -1,8 +1,2 @@
-<!-- <app-filter></app-filter> -->
-<a href="/article">Some motherFucker</a>
-<a routerLink="/article">Some motherFucker</a>
-<a routerLink="/article" routerLinkActive="active">First Component</a>
-
-<p routerLink="/article">news works!</p>
-
+<app-filter (filterChanged)="onFilterChanged($event)"></app-filter>
 <app-posts [articles$]="articles$"></app-posts>

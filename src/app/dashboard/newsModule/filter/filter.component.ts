@@ -1,4 +1,4 @@
-import { Component,ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -8,5 +8,10 @@ import { Component,ChangeDetectionStrategy } from '@angular/core';
 
 })
 export class FilterComponent {
+  @Output() public filterChanged: EventEmitter<string> = new EventEmitter<string>();
 
+  public onInputChange(value: Event) {
+    const filterValue = (value.target as HTMLInputElement).value;
+    this.filterChanged.emit(filterValue);
+  }
 }

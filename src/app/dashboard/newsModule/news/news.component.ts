@@ -16,9 +16,15 @@ import { ArticleSelectors } from 'src/app/shared/store/news.selectors';
 export class NewsComponent implements OnInit {
   @Select(ArticleSelectors.article)
   public articles$!: Observable<IArticle[]>;
+
   constructor(private store: Store) { }
 
   public ngOnInit(): void {
     this.store.dispatch(new GetArticle());
   }
+
+  public onFilterChanged(filterValue: string) {
+    console.log(filterValue)
+  }
+
 }

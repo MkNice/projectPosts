@@ -11,8 +11,13 @@
         article.published_at | dateFormat
       }}</span>
     </div>
-    <p class="post-container-title">{{ article.title }}</p>
-    <p class="post-container-description">
+    <p class="post-container-title" [innerHTML]="article.title | highLight: filterValue">
+      {{ article.title }}
+    </p>
+    <p
+      class="post-container-description"
+      [innerHTML]="article.summary | highLight: filterValue"
+    >
       {{ article.summary }}
     </p>
     <a (click)="onReadMore()" class="post-container-link"

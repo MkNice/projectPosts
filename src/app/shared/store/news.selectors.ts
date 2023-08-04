@@ -9,6 +9,11 @@ export class ArticleSelectors {
   }
 
   @Selector([ArticleState])
+  static filteredArticle(state: IArticleState) {
+    return state.article;
+  }
+
+  @Selector([ArticleState])
   static error(state: IArticleState) {
     return state.error;
   }

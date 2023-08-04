@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input,OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IArticle } from 'src/app/shared/interfaces/article.interface';
 
@@ -8,6 +8,7 @@ import { IArticle } from 'src/app/shared/interfaces/article.interface';
   styleUrls: ['./posts.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PostsComponent{
+export class PostsComponent {
   @Input() public articles$!: Observable<IArticle[]>;
+  @Input() public filterValue: string = '';
 }

@@ -10,6 +10,7 @@ import { PostsComponent } from './posts/posts.component';
 import { FormsModule } from '@angular/forms';
 import { DateFormatPipe } from 'src/app/shared/pipes/dateFormat.pipe';
 import { NewsRoutingModule } from './news-routing.module';
+import { HighLightPipe } from 'src/app/shared/pipes/high-light.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { NewsRoutingModule } from './news-routing.module';
     PostComponent,
     ArticleComponent,
     NewsComponent,
-    DateFormatPipe
+    DateFormatPipe,
+    HighLightPipe
   ],
   imports: [
     CommonModule,

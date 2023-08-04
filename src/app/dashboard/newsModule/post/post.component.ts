@@ -10,6 +10,7 @@ import { IArticle } from 'src/app/shared/interfaces/article.interface';
 })
 export class PostComponent {
   @Input() public article!: IArticle;
+  @Input() public filterValue: string = '';
 
   constructor(private router: Router) {}
 

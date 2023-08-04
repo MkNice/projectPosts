@@ -12,6 +12,7 @@ import { DateFormatPipe } from 'src/app/shared/pipes/dateFormat.pipe';
 import { NewsRoutingModule } from './news-routing.module';
 import { HighLightPipe } from 'src/app/shared/pipes/high-light.pipe';
 
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HighLightPipe } from 'src/app/shared/pipes/high-light.pipe';
     CommonModule,
     HttpClientModule,
     FormsModule,
-    NewsRoutingModule
+    NewsRoutingModule,
+    MatCardModule
   ]
 })
 export class NewsModule { }

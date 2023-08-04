@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { IArticle } from 'src/app/shared/interfaces/article.interface';
-import { DestroyService } from 'src/app/shared/services/destroy.service';
 import { GetArticle, GetFilteredArticle } from 'src/app/shared/store/news.actions';
 import { ArticleSelectors } from 'src/app/shared/store/news.selectors';
 
@@ -17,15 +16,19 @@ export class NewsComponent implements OnInit {
   public articles$!: Observable<IArticle[]>;
   public filterValue: string = '';
 
-  constructor(private store: Store, private cdr: ChangeDetectorRef) { }
+  constructor(private store: Store) { }
 
   public ngOnInit(): void {
+    this.getArticle();
+  }
+
+  public getArticle(): void {
     this.store.dispatch(new GetArticle());
   }
 
   public onFilterChanged(filterValue: string) {
     this.filterValue = filterValue;
-    this.store.dispatch(new GetFilteredArticle(filterValue))
+    this.store.dispatch(new GetFilteredArticle(filterValue));
   }
-
 }
+

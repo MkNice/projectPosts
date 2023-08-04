@@ -4,7 +4,7 @@
   position: relative;
 }
 section{
-  width: 1290px;
+  max-width: 1290px;
   max-height: 1001px;
 
   overflow: auto;
@@ -30,8 +30,9 @@ section{
 }
 
 .link-container{
-  position: absolute;
-  top: 900px;
+  position: relative;
+  left: 10%;
+  bottom:60px;
   img{
     transform: rotate(180deg);
   }

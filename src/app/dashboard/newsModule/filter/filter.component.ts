@@ -5,7 +5,6 @@ import { Component, ChangeDetectionStrategy, EventEmitter, Output } from '@angul
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class FilterComponent {
   @Output() public filterChanged: EventEmitter<string> = new EventEmitter<string>();

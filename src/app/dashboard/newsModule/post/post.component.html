@@ -1,27 +1,18 @@
-<div class="post">
-  <img class="post-img" [src]="article.image_url" alt="postImg" />
-  <div class="post-container">
-    <div class="post-container-date">
-      <img
-        class="post-container-icon"
-        src="assets/akar-icons_calendar.svg"
-        alt="icon"
-      />
-      <span class="post-container-date">{{
-        article.published_at | dateFormat
-      }}</span>
-    </div>
-    <p class="post-container-title" [innerHTML]="article.title | highLight: filterValue">
-      {{ article.title }}
-    </p>
-    <p
-      class="post-container-description"
-      [innerHTML]="article.summary | highLight: filterValue"
-    >
-      {{ article.summary }}
-    </p>
+<mat-card class="card">
+  <img mat-card-image class="card-image" [src]="article.image_url" alt="postImg" />
+  <mat-card-subtitle>
+    <img class="icon" src="assets/akar-icons_calendar.svg" alt="icon" />
+    {{ article.published_at | dateFormat }}
+  </mat-card-subtitle>
+  <mat-card-title [innerHTML]="article.title | highLight : filterValue">
+    {{ article.title }}
+  </mat-card-title>
+  <mat-card-content [innerHTML]="article.title | highLight : filterValue">
+    {{ article.summary }}
+  </mat-card-content>
+  <mat-card-actions>
     <a (click)="onReadMore()" class="post-container-link"
       >Read more <img src="assets/arrow-right.svg" alt="arrow"
     /></a>
-  </div>
-</div>
+  </mat-card-actions>
+</mat-card>

@@ -12,15 +12,12 @@ export class DateFormatPipe implements PipeTransform {
     const datePipe = new DatePipe('en-US');
     const formattedDate = datePipe.transform(dateObj, 'MMMM d, y') || "";
 
-    // Custom logic to add the "th", "st", "nd", "rd" suffix to the day number
     const day = dateObj.getDate();
     const suffix = this.getDayNumberSuffix(day);
 
-    // Replace the day number with the day number plus suffix
     return formattedDate.replace(/\d+/, (match) => match + suffix);
   }
 
-  // Helper function to get the day number suffix
   private getDayNumberSuffix(day: number): string {
     if (day >= 11 && day <= 13) {
       return 'th';
